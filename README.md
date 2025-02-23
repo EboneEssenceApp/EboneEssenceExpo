@@ -19,7 +19,6 @@
 ### **Frontend (Mobile App)**
 
 - **React Native** – Cross-platform mobile development.
-- **Tailwind CSS** – Custom styling for sleek UI.
 - **Redux Toolkit** – State management.
 
 ### **Backend & Cloud Services**

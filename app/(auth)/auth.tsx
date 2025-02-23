@@ -140,7 +140,13 @@ export default function AuthScreen() {
                 placeholderTextColor="rgba(255, 255, 255, 0.6)"
                 secureTextEntry
               />
-              <TouchableOpacity style={styles.submitButton}>
+              <TouchableOpacity
+                style={styles.submitButton}
+                onPress={() => {
+                  // Handle registration logic here
+                  router.push("/(auth)/verify");
+                }}
+              >
                 <Text style={styles.submitText}>Register</Text>
               </TouchableOpacity>
             </>
