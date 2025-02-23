@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
   },
   cameraContainer: {
     width: "100%",
-    aspectRatio: 3 / 4,
+    height: "70%",
     borderRadius: 20,
     overflow: "hidden",
     marginBottom: 40,
@@ -68,7 +68,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   selfieGuide: {
-    width: width * 0.7,
+    width: width * 0.75,
     aspectRatio: 1,
     justifyContent: "center",
     alignItems: "center",
@@ -76,13 +76,13 @@ export const styles = StyleSheet.create({
   selfieOutline: {
     width: "100%",
     height: "100%",
-    borderRadius: width * 0.35,
+    borderRadius: width * 0.325,
     borderWidth: 2,
     borderColor: "rgba(255, 255, 255, 0.5)",
   },
   idGuide: {
-    width: width * 0.8,
-    aspectRatio: 1.6,
+    width: width * 0.9,
+    aspectRatio: 1.3,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -136,5 +136,18 @@ export const styles = StyleSheet.create({
     position: "absolute",
     bottom: 50,
     alignSelf: "center",
+  },
+  photoGrid: {
+    flexDirection: "row",
+    gap: 10,
+    marginVertical: 20,
+    justifyContent: "center",
+  },
+  thumbnailImage: {
+    width: width * 0.25,
+    height: width * 0.25,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: "rgba(255, 255, 255, 0.2)",
   },
 });

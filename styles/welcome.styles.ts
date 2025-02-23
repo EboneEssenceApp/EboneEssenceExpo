@@ -9,9 +9,10 @@ export const styles = StyleSheet.create({
   },
   gradient: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
     paddingHorizontal: 24,
+    paddingTop: 40,
   },
   logoContainer: {
     width: width * 0.6,

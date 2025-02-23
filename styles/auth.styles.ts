@@ -109,7 +109,7 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 40,
     position: "absolute",
-    bottom: 50,
+    bottom: 60,
     alignSelf: "center",
   },
 });
