@@ -145,6 +145,11 @@ export default function AuthScreen() {
               </TouchableOpacity>
             </>
           )}
+
+          <Image
+            source={require("../../assets/images/heart-icon.png")}
+            style={styles.decorativeIcon}
+          />
         </LinearGradient>
       </SafeAreaView>
     </View>

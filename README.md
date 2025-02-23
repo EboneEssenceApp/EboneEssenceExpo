@@ -1,50 +1,190 @@
-# Welcome to your Expo app 👋
+# ✨ Eboné Essence
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+🚀 **Eboné Essence** is a premium **dating & social networking app** designed for Black singles to connect, engage, and find love. It blends **matchmaking, real-time messaging, and social interactions** with exclusive VIP features.
 
-## Get started
+---
 
-1. Install dependencies
+## 📌 Features
 
-   ```bash
-   npm install
-   ```
+✅ **Swipe-Based Matchmaking** – Like or pass profiles to find the best matches.  
+✅ **Real-Time Messaging** – Chat with matches instantly (VIP users get extra perks).  
+✅ **Social Feed** – Post updates, like, and comment just like a social network.  
+✅ **VIP Virtual Events** – Speed dating, mixers, and more exclusive experiences.  
+✅ **Secure & Verified Community** – AI moderation, profile verification, and encrypted chats.
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## 🛠️ Tech Stack
 
-In the output, you'll find options to open the app in a
+### **Frontend (Mobile App)**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **React Native** – Cross-platform mobile development.
+- **Tailwind CSS** – Custom styling for sleek UI.
+- **Redux Toolkit** – State management.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### **Backend & Cloud Services**
 
-## Get a fresh project
+- **Node.js & Express** – API and matchmaking logic.
+- **AWS Lambda & API Gateway** – Serverless backend.
+- **Amazon DynamoDB** – NoSQL database.
+- **AWS S3** – Profile photos & media storage.
+- **AWS Cognito** – Authentication & user management.
 
-When you're ready, run:
+---
+
+## 🚀 Getting Started
+
+### **1️⃣ Clone the Repository**
 
 ```bash
-npm run reset-project
+git clone https://github.com/YOUR-USERNAME/EboneEssence.git
+cd EboneEssence
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### **2️⃣ Install Dependencies**
 
-## Learn more
+```bash
+# Frontend
+cd frontend
+npm install
 
-To learn more about developing your project with Expo, look at the following resources:
+# Backend
+cd backend
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### **3️⃣ Run the App**
 
-## Join the community
+```bash
+# Start the backend (Express API)
+cd backend
+npm start
 
-Join our community of developers creating universal apps.
+# Start the React Native app
+cd frontend
+npm start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 🔍 Project Structure
+
+```
+EboneEssence/
+│── .github/                  # GitHub workflows (CI/CD, Actions)
+│   ├── workflows/            # GitHub Actions workflow files
+│   │   ├── ci.yml            # CI/CD pipeline (build, lint, test)
+│   │   ├── deploy.yml        # Deployment automation
+│   ├── ISSUE_TEMPLATE.md     # Issue template (optional)
+│   ├── PULL_REQUEST_TEMPLATE.md  # PR template (optional)
+│
+│── frontend/                 # React Native app (mobile)
+│   ├── src/                  # Main source code
+│   │   ├── components/       # Reusable UI components
+│   │   ├── screens/          # Screen layouts (Home, Profile, Matches)
+│   │   ├── navigation/       # React Navigation setup
+│   │   ├── redux/            # Redux state management
+│   │   ├── services/         # API requests (Axios, GraphQL, etc.)
+│   │   │   ├── authService.ts  # Handles authentication requests
+│   │   │   ├── userService.ts  # Fetches user-related data
+│   │   │   ├── apiClient.ts    # Configures Axios instance
+│   │   ├── assets/           # Images, icons, fonts
+│   │   ├── utils/            # Helper functions
+│   │   ├── config/           # Configuration files
+│   │   │   ├── theme.ts      # Theme and styling settings
+│   │   │   ├── constants.ts  # Common app constants
+│   ├── .env                  # Environment variables (never commit this)
+│   ├── package.json          # Dependencies & scripts
+│   ├── index.js              # Entry point
+│   ├── App.tsx               # Main application file
+│
+│── backend/                  # Node.js + Express API
+│   ├── src/
+│   │   ├── controllers/      # Business logic
+│   │   ├── models/           # Database models (MongoDB/DynamoDB)
+│   │   ├── routes/           # API endpoints
+│   │   ├── middleware/       # Authentication & security (JWT, rate-limiting)
+│   │   ├── services/         # Services for database queries, 3rd party APIs
+│   │   │   ├── authService.ts  # Handles authentication
+│   │   │   ├── userService.ts  # Fetches user data
+│   │   ├── utils/            # Utility functions (logging, error handling)
+│   │   ├── config/           # Configuration settings
+│   │   │   ├── db.ts         # Database connection logic
+│   │   │   ├── auth.ts       # JWT & authentication settings
+│   │   │   ├── constants.ts  # App-wide constants
+│   ├── .env                  # Backend environment variables
+│   ├── server.js             # Express server entry
+│   ├── package.json          # Backend dependencies
+│
+│── docs/                     # Documentation
+│   ├── PRD.md                # Product Requirement Document
+│   ├── README.md             # Project Overview
+│   ├── API_REFERENCE.md      # API Documentation
+│   ├── CONTRIBUTING.md       # Guide for contributors (new addition)
+│
+│── tests/                    # Automated tests
+│   ├── frontend/             # UI tests (Jest, Detox)
+│   ├── backend/              # API tests (Jest, Supertest)
+│   ├── e2e/                  # End-to-end tests (Cypress or Detox)
+│
+│── .gitignore                # Ignore unnecessary files
+│── LICENSE                   # Proprietary License
+```
+
+---
+
+## ✅ Contributing
+
+We welcome contributions! **If you’d like to contribute:**
+
+1. Fork the repository.
+2. Create a feature branch (`feature/new-feature`).
+3. Submit a pull request.
+
+---
+
+## 🔒 Security & Privacy
+
+- **End-to-End Encryption** – Ensures secure messaging.
+- **AWS WAF & API Gateway** – Protects against cyber threats.
+- **User Report System** – Allows users to report fake profiles & inappropriate behavior.
+
+---
+
+## 📅 Roadmap
+
+🚀 **Phase 1** – MVP Development (In Progress)  
+🚀 **Phase 2** – Beta Testing & User Feedback  
+🚀 **Phase 3** – Launch in Select Cities
+
+---
+
+## 📬 Contact
+
+📩 **Email:** support@eboneessence.com  
+🌐 **Website:** [www.eboneessence.com](https://www.eboneessence.com)  
+📱 **Follow Us on Social Media**
+
+---
+
+## 📜 License
+
+```
+Eboné Essence - Proprietary License
+
+Copyright (c) 2024 Eboné Essence
+
+All rights reserved.
+
+This software and its source code are proprietary to Eboné Essence and are not to be copied, distributed, modified, or shared without express permission from the copyright holder.
+
+Unauthorized use, reproduction, or distribution of this software, in whole or in part, is strictly prohibited.
+
+For licensing inquiries, please contact: legal@eboneessence.com
+```
+
+---
+
+### 🎉 **Eboné Essence – More Than Just Dating, It’s a Movement.**
+
+💙 **#BlackLove #BlackConnections #EboneEssence**

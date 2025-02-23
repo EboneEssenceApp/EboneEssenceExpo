@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
   },
   toggleContainer: {
     flexDirection: "row",
-    marginBottom: 30,
+    marginBottom: 50,
     borderRadius: 25,
     borderWidth: 1,
     borderColor: "rgba(255, 255, 255, 0.3)",
@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 0.1)",
     borderRadius: 25,
     padding: 15,
-    marginBottom: 15,
+    marginBottom: 35,
     color: "white",
     fontSize: 16,
   },
@@ -58,6 +58,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 20,
+    marginTop: -20,
   },
   customCheckbox: {
     width: 24,
@@ -103,5 +104,12 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 14,
     textDecorationLine: "underline",
+  },
+  decorativeIcon: {
+    width: 40,
+    height: 40,
+    position: "absolute",
+    bottom: 50,
+    alignSelf: "center",
   },
 });

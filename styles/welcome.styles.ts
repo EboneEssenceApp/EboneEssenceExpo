@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
   logoContainer: {
     width: width * 0.6,
     height: width * 0.6,
-    marginTop: 20,
+    marginTop: 10,
     marginBottom: 25,
     overflow: "hidden",
   },
@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: "rgba(255, 255, 255, 0.8)",
     textAlign: "center",
-    marginBottom: 48,
+    marginBottom: 38,
     lineHeight: 24,
     paddingHorizontal: 20,
     marginTop: 16,
@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
     borderRadius: 30,
     width: "100%",
     alignItems: "center",
-    marginTop: 24,
+    marginTop: 5,
     borderWidth: 1,
     borderColor: "#FFD966",
   },
@@ -66,7 +66,7 @@ export const styles = StyleSheet.create({
   loginContainer: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 40,
   },
   loginText: {
     color: "white",
@@ -84,6 +84,6 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 40,
     resizeMode: "contain",
-    marginTop: 30,
+    marginTop: 50,
   },
 });
