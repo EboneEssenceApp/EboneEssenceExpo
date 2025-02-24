@@ -39,19 +39,12 @@ export default function VerifyScreen() {
     <View style={styles.container}>
       <StatusBar
         barStyle="light-content"
-        backgroundColor="#2D0845"
+        backgroundColor="#1A1A40"
         translucent={true}
       />
       <SafeAreaView style={{ flex: 1 }}>
         <LinearGradient
-          colors={[
-            "#8C2AC2",
-            "#7526B6",
-            "#5B089D",
-            "#3A0055",
-            "#220033",
-            "#100019",
-          ]}
+          colors={["#B32872", "#5A189A", "#1A1A40"]}
           style={[
             styles.gradient,
             Platform.OS === "android" && {
@@ -66,12 +59,13 @@ export default function VerifyScreen() {
             <Ionicons name="arrow-back" size={24} color="white" />
           </TouchableOpacity>
 
-          <View style={styles.header}>
+          {/* add logo here */}
+          {/* <View style={styles.header}>
             <Image
               source={require("../../assets/images/ebone-essence-title.png")}
               style={styles.titleImage}
             />
-          </View>
+          </View> */}
 
           <Text style={styles.title}>Enter Verification Code</Text>
           <Text style={styles.subtitle}>
@@ -97,7 +91,7 @@ export default function VerifyScreen() {
 
           <TouchableOpacity
             style={styles.submitButton}
-            onPress={() => router.push("/(auth)/verify-id")}
+            onPress={() => router.push("/(auth)/verification-steps")}
           >
             <Text style={styles.submitText}>Verify Email</Text>
           </TouchableOpacity>

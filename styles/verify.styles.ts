@@ -3,7 +3,7 @@ import { StyleSheet, Platform, StatusBar } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2D0845",
+    backgroundColor: "#1A1A40",
   },
   gradient: {
     flex: 1,
@@ -30,6 +30,7 @@ export const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
     marginBottom: 12,
+    marginTop: 70,
   },
   subtitle: {
     fontSize: 16,
@@ -55,14 +56,15 @@ export const styles = StyleSheet.create({
     borderColor: "rgba(255, 255, 255, 0.2)",
   },
   submitButton: {
-    backgroundColor: "#9C27B0",
+    backgroundColor: "#16A085",
     paddingVertical: 16,
-    borderRadius: 30,
-    width: "100%",
+    borderRadius: 100,
+    width: "90%",
     alignItems: "center",
     marginTop: 24,
-    borderWidth: 1,
-    borderColor: "#FFD966",
+    borderWidth: 2,
+    borderColor: "#E6B800",
+    alignSelf: "center",
   },
   submitText: {
     color: "white",
@@ -88,7 +90,7 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 40,
     position: "absolute",
-    bottom: 50,
+    bottom: 15,
     alignSelf: "center",
   },
 });

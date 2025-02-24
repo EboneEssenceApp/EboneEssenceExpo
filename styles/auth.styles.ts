@@ -3,7 +3,7 @@ import { StyleSheet, Platform, StatusBar } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2D0845",
+    backgroundColor: "#1A1A40",
   },
   gradient: {
     flex: 1,
@@ -32,6 +32,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "rgba(255, 255, 255, 0.3)",
     overflow: "hidden",
+    marginTop: 80,
   },
   toggleButton: {
     flex: 1,
@@ -82,14 +83,15 @@ export const styles = StyleSheet.create({
     fontSize: 14,
   },
   submitButton: {
-    backgroundColor: "#9C27B0",
+    backgroundColor: "#16A085",
     paddingVertical: 16,
-    borderRadius: 30,
+    borderRadius: 100,
     width: "100%",
     alignItems: "center",
     marginTop: 24,
-    borderWidth: 1,
-    borderColor: "#FFD966",
+    borderWidth: 2,
+    borderColor: "#E6B800",
+    alignSelf: "center",
   },
   submitText: {
     color: "white",
@@ -98,7 +100,8 @@ export const styles = StyleSheet.create({
   },
   forgotPasswordButton: {
     alignItems: "center",
-    marginTop: 20,
+    marginTop: -40,
+    position: "relative",
   },
   forgotPasswordText: {
     color: "white",
@@ -109,7 +112,48 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 40,
     position: "absolute",
-    bottom: 60,
+    bottom: 15,
     alignSelf: "center",
+  },
+  inlineContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  socialMediaContainer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 20,
+    gap: 10,
+  },
+  socialButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 17,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    width: "100%",
+    position: "relative",
+  },
+  facebookButton: {
+    backgroundColor: "#3b5998",
+    marginBottom: 10,
+  },
+  googleButton: {
+    backgroundColor: "#db4437",
+  },
+  icon: {
+    position: "absolute",
+    left: 20,
+  },
+  socialButtonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "600",
+    textAlign: "center",
+    flex: 1,
   },
 });

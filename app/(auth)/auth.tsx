@@ -27,19 +27,12 @@ export default function AuthScreen() {
     <View style={styles.container}>
       <StatusBar
         barStyle="light-content"
-        backgroundColor="#2D0845"
+        backgroundColor="#1A1A40"
         translucent={true}
       />
       <SafeAreaView style={{ flex: 1 }}>
         <LinearGradient
-          colors={[
-            "#8C2AC2",
-            "#7526B6",
-            "#5B089D",
-            "#3A0055",
-            "#220033",
-            "#100019",
-          ]}
+          colors={["#B32872", "#5A189A", "#1A1A40"]}
           style={[
             styles.gradient,
             Platform.OS === "android" && {
@@ -54,12 +47,13 @@ export default function AuthScreen() {
             <Ionicons name="arrow-back" size={24} color="white" />
           </TouchableOpacity>
 
-          <View style={styles.header}>
+          {/* add logo here */}
+          {/* <View style={styles.header}>
             <Image
               source={require("../../assets/images/ebone-essence-title.png")}
               style={styles.titleImage}
             />
-          </View>
+          </View> */}
 
           <View style={styles.toggleContainer}>
             <TouchableOpacity
@@ -95,26 +89,57 @@ export default function AuthScreen() {
                 placeholderTextColor="rgba(255, 255, 255, 0.6)"
                 secureTextEntry
               />
-              <TouchableOpacity
-                style={styles.checkboxContainer}
-                onPress={() => setKeepLoggedIn(!keepLoggedIn)}
-              >
-                <View
-                  style={[
-                    styles.customCheckbox,
-                    keepLoggedIn && styles.customCheckboxChecked,
-                  ]}
+              <View style={styles.inlineContainer}>
+                <TouchableOpacity
+                  style={styles.checkboxContainer}
+                  onPress={() => setKeepLoggedIn(!keepLoggedIn)}
                 >
-                  {keepLoggedIn && <Text style={styles.checkmark}>✓</Text>}
-                </View>
-                <Text style={styles.checkboxLabel}>Keep me logged in</Text>
-              </TouchableOpacity>
+                  <View
+                    style={[
+                      styles.customCheckbox,
+                      keepLoggedIn && styles.customCheckboxChecked,
+                    ]}
+                  >
+                    {keepLoggedIn && <Text style={styles.checkmark}>✓</Text>}
+                  </View>
+                  <Text style={styles.checkboxLabel}>Keep me logged in</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.forgotPasswordButton}>
+                  <Text style={styles.forgotPasswordText}>
+                    Forgot Password?
+                  </Text>
+                </TouchableOpacity>
+              </View>
               <TouchableOpacity style={styles.submitButton}>
                 <Text style={styles.submitText}>Login</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.forgotPasswordButton}>
-                <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
-              </TouchableOpacity>
+
+              <View style={styles.socialMediaContainer}>
+                <TouchableOpacity
+                  style={[styles.socialButton, styles.facebookButton]}
+                >
+                  <Ionicons
+                    name="logo-facebook"
+                    size={24}
+                    color="white"
+                    style={styles.icon}
+                  />
+                  <Text style={styles.socialButtonText}>
+                    Login with Facebook
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.socialButton, styles.googleButton]}
+                >
+                  <Ionicons
+                    name="logo-google"
+                    size={24}
+                    color="white"
+                    style={styles.icon}
+                  />
+                  <Text style={styles.socialButtonText}>Login with Google</Text>
+                </TouchableOpacity>
+              </View>
             </>
           ) : (
             <>

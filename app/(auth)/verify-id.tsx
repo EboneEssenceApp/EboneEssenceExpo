@@ -23,26 +23,46 @@ const CompleteScreen = ({
   photos: { selfie?: string; idFront?: string; idBack?: string };
 }) => {
   return (
-    <View style={styles.completeContainer}>
-      <Ionicons name="checkmark-circle" size={80} color="#4CAF50" />
-      <Text style={styles.title}>Verification Complete!</Text>
-      <Text style={styles.subtitle}>
-        Your photos have been submitted for verification
-      </Text>
+    <LinearGradient
+      colors={["#B32872", "#5A189A", "#1A1A40"]}
+      style={styles.gradient}
+    >
+      <View style={styles.completeContainer}>
+        <Ionicons name="checkmark-circle" size={80} color="#4CAF50" />
+        <Text style={styles.title}>Verification Confirmation</Text>
+        <Text style={styles.subtitle}>
+          Once you are satisfied with your images, please proceed to submit them
+          for verification. This ensures the accuracy and authenticity of your
+          identity verification process.
+        </Text>
 
-      <View style={styles.photoGrid}>
-        {Object.entries(photos).map(([key, uri]) => (
-          <Image key={key} source={{ uri }} style={styles.thumbnailImage} />
-        ))}
+        <View style={styles.photoGrid}>
+          {Object.entries(photos).map(([key, uri]) => (
+            <Image key={key} source={{ uri }} style={styles.thumbnailImage} />
+          ))}
+        </View>
+
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity
+            style={styles.retakeButton}
+            onPress={() => router.push("/(auth)/verification-steps")}
+          >
+            <Text style={styles.buttonText}>Re-take</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.confirmSubmitButton}
+            onPress={() => router.push("/VerificationStatusScreen")}
+          >
+            <Text style={styles.buttonText}>Submit</Text>
+          </TouchableOpacity>
+        </View>
+
+        <Image
+          source={require("../../assets/images/heart-icon.png")}
+          style={styles.confirmDecorativeIcon}
+        />
       </View>
-
-      <TouchableOpacity
-        style={styles.submitButton}
-        onPress={() => router.push("/(tabs)")}
-      >
-        <Text style={styles.submitText}>Continue to App</Text>
-      </TouchableOpacity>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -119,14 +139,7 @@ export default function VerifyIdScreen() {
       />
       <SafeAreaView style={{ flex: 1 }}>
         <LinearGradient
-          colors={[
-            "#8C2AC2",
-            "#7526B6",
-            "#5B089D",
-            "#3A0055",
-            "#220033",
-            "#100019",
-          ]}
+          colors={["#B32872", "#5A189A", "#1A1A40"]}
           style={[
             styles.gradient,
             Platform.OS === "android" && {
@@ -145,8 +158,11 @@ export default function VerifyIdScreen() {
             style={[
               styles.cameraContainer,
               (currentStep === "id-front" || currentStep === "id-back") && {
-                height: "85%",
-                marginTop: 20,
+                height: "75%",
+                marginTop:
+                  Platform.OS === "android"
+                    ? (StatusBar.currentHeight ?? 0) + 60
+                    : 60,
               },
             ]}
           >

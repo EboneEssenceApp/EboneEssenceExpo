@@ -20,19 +20,13 @@ export default function WelcomeScreen() {
     <View style={styles.container}>
       <StatusBar
         barStyle="light-content"
-        backgroundColor="#2D0845"
+        backgroundColor="#E6A530"
         translucent={true}
       />
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={[{ flex: 1 }, { backgroundColor: "#1A1A40" }]}>
         <LinearGradient
-          colors={[
-            "#8C2AC2",
-            "#7526B6",
-            "#5B089D",
-            "#3A0055",
-            "#220033",
-            "#100019",
-          ]}
+          colors={["#E6B800", "#E69E40", "#B32872", "#5A189A", "#1A1A40"]}
+          // locations={[0, 0.3, 0.6, 1, 1]} // adjust gradient color locations
           style={[
             styles.gradient,
             Platform.OS === "android" && {
@@ -42,7 +36,7 @@ export default function WelcomeScreen() {
         >
           <View style={styles.logoContainer}>
             <Image
-              source={require("../../assets/images/couples-icon.png")}
+              source={require("../../assets/images/social-love2.png")}
               style={styles.logoImage}
             />
           </View>
@@ -52,7 +46,7 @@ export default function WelcomeScreen() {
             style={styles.titleImage}
           />
 
-          <Text style={styles.tagline}>Vibe. Love. Thrive.</Text>
+          <Text style={styles.tagline}>Vibe. Love. Culture.</Text>
 
           <Text style={styles.subtitle}>
             A premier space for social connections,{"\n"}meaningful love, and a

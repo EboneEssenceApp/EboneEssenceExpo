@@ -5,7 +5,7 @@ const { width } = Dimensions.get("window");
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2D0845",
+    backgroundColor: "#E6A530",
   },
   gradient: {
     flex: 1,
@@ -15,14 +15,13 @@ export const styles = StyleSheet.create({
     paddingTop: 40,
   },
   logoContainer: {
-    width: width * 0.6,
-    height: width * 0.6,
-    marginTop: 10,
-    marginBottom: 25,
+    width: width * 0.8,
+    height: width * 0.8,
+    marginBottom: 10,
     overflow: "hidden",
   },
   titleImage: {
-    width: width * 0.8,
+    width: width * 0.9,
     height: 60,
     resizeMode: "contain",
     marginBottom: 12,
@@ -31,6 +30,7 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     resizeMode: "cover",
+    marginTop: -15,
   },
   tagline: {
     fontSize: 24,
@@ -50,14 +50,15 @@ export const styles = StyleSheet.create({
     marginTop: 16,
   },
   getStartedButton: {
-    backgroundColor: "#9C27B0",
+    backgroundColor: "#16A085",
     paddingVertical: 16,
-    borderRadius: 30,
-    width: "100%",
+    borderRadius: 50,
+    width: "90%",
     alignItems: "center",
     marginTop: 5,
-    borderWidth: 1,
-    borderColor: "#FFD966",
+    borderWidth: 2,
+    borderColor: "#E6B800",
+    alignSelf: "center",
   },
   getStartedText: {
     color: "white",
@@ -67,7 +68,7 @@ export const styles = StyleSheet.create({
   loginContainer: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 40,
+    marginTop: 30,
   },
   loginText: {
     color: "white",
@@ -85,6 +86,6 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 40,
     resizeMode: "contain",
-    marginTop: 50,
+    marginTop: 40,
   },
 });
