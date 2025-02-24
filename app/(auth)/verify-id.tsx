@@ -9,6 +9,7 @@ import {
   Platform,
   StatusBar,
   Image,
+  Modal,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
@@ -22,6 +23,14 @@ const CompleteScreen = ({
 }: {
   photos: { selfie?: string; idFront?: string; idBack?: string };
 }) => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const openImageModal = (uri: string) => {
+    setSelectedImage(uri);
+    setModalVisible(true);
+  };
+
   return (
     <LinearGradient
       colors={["#B32872", "#5A189A", "#1A1A40"]}
@@ -38,7 +47,9 @@ const CompleteScreen = ({
 
         <View style={styles.photoGrid}>
           {Object.entries(photos).map(([key, uri]) => (
-            <Image key={key} source={{ uri }} style={styles.thumbnailImage} />
+            <TouchableOpacity key={key} onPress={() => openImageModal(uri)}>
+              <Image source={{ uri }} style={styles.thumbnailImage} />
+            </TouchableOpacity>
           ))}
         </View>
 
@@ -61,6 +72,25 @@ const CompleteScreen = ({
           source={require("../../assets/images/heart-icon.png")}
           style={styles.confirmDecorativeIcon}
         />
+
+        <Modal
+          visible={modalVisible}
+          transparent={true}
+          onRequestClose={() => setModalVisible(false)}
+        >
+          <View style={styles.modalContainer}>
+            <Image
+              source={{ uri: selectedImage ?? "" }}
+              style={styles.fullImage}
+            />
+            <TouchableOpacity
+              style={styles.closeButton}
+              onPress={() => setModalVisible(false)}
+            >
+              <Text style={styles.closeButtonText}>Close</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
       </View>
     </LinearGradient>
   );

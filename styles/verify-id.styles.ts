@@ -285,4 +285,27 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: 500,
   },
+  modalContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+  },
+  fullImage: {
+    width: "90%",
+    height: "70%",
+    borderRadius: 12,
+  },
+  closeButton: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: "#E74C3C",
+    borderRadius: 8,
+  },
+  closeButtonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "600",
+    textAlign: "center",
+  },
 });
