@@ -62,7 +62,7 @@ const CompleteScreen = ({
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.confirmSubmitButton}
-            onPress={() => router.push("/VerificationStatusScreen")}
+            onPress={() => router.push("/(auth)/VerificationStatusScreen")}
           >
             <Text style={styles.buttonText}>Submit</Text>
           </TouchableOpacity>

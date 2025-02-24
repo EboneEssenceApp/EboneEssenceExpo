@@ -8,7 +8,7 @@ export default function AuthLayout() {
       <Stack.Screen name="verify" />
       <Stack.Screen name="verify-id" />
       <Stack.Screen name="verification-steps" />
-      <Stack.Screen name="verification-status" />
+      <Stack.Screen name="VerificationStatusScreen" />
     </Stack>
   );
 }
